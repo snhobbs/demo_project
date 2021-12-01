@@ -25,7 +25,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       with:
-        repository: google/googletest.git #     <-- clone https://github.com/org1/repo1
+        repository: google/googletest #     <-- clone https://github.com/org1/repo1
         path: ./googletest
 
     - name: Setup Toolchain
