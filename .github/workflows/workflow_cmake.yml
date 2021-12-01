@@ -25,7 +25,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - name: Setup Toolchain:
+    - name: Setup Toolchain
       run: mkdir ${{github.workspace}}/toolchains && cd toolchains && wget ${{env.TOOLCHAIN_URL}} && tar -xf ${{env.TOOLCHAIN_TARBALL}}
 
     - name: Clone GTest
