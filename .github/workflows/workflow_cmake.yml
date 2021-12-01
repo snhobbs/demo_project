@@ -24,10 +24,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Checkout tools repo
+      uses: actions/checkout@v2
       with:
         repository: google/googletest #     <-- clone https://github.com/org1/repo1
-        path: ./googletest
+        path: googletest
+
 
     #- name: Setup Toolchain
     #  run: mkdir ${{github.workspace}}/toolchains && cd toolchains && wget ${{env.TOOLCHAIN_URL}} && tar -xf ${{env.TOOLCHAIN_TARBALL}} && cd ../
