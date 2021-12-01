@@ -32,12 +32,12 @@ jobs:
     #- name: Setup Toolchain
     #  run: mkdir ${{github.workspace}}/toolchains && cd toolchains && wget ${{env.TOOLCHAIN_URL}} && tar -xf ${{env.TOOLCHAIN_TARBALL}} && cd ../
 
-    - name: Clone GTest
+    #- name: Clone GTest
       #run: git clone git@github.com:google/googletest.git && cd googletest && cmake -B build && make --directory=build && ln -s ${{github.workspace}}/tests
-      run: cd googletest && cmake -B build && make --directory=build && ln -s ${{github.workspace}}/tests && cd ../
+   #   run: cd googletest && cmake -B build && make --directory=build && ln -s ${{github.workspace}}/tests && cd ../
 
     - name: List Files
-      run:  ls -l ../../ && ls -l ../ && ls -l ./ && ls -l ${{github.workspace}}
+      run:  ls -l ../../ && ls -l ../ && ls -l demo_project && ls -l ./ && ls -l ${{github.workspace}}
 
     - name: Configure CMake
       # Configure CMake in a 'build' subdirectory. `CMAKE_BUILD_TYPE` is only required if you are using a single-configuration generator such as make.
