@@ -37,11 +37,10 @@ jobs:
     #- name: Setup Toolchain
     #  run: mkdir ${{github.workspace}}/toolchains && cd toolchains && wget ${{env.TOOLCHAIN_URL}} && tar -xf ${{env.TOOLCHAIN_TARBALL}} && cd ../
 
-    #- name: Clone GTest
+    - name: Clone GTest
       #run: git clone git@github.com:google/googletest.git && cd googletest && cmake -B build && make --directory=build && ln -s ${{github.workspace}}/tests
-   #   run: cd googletest && cmake -B build && make --directory=build && ln -s ${{github.workspace}}/tests && cd ../
-    - uses: actions/checkout@v2
-
+      run: cd googletest && cmake -B build && make --directory=build && ln -s ${{github.workspace}}/tests && cd ../
+ 
     - name: List Files
       run:  ls -l ../../ && ls -l ../ && ls -l ./ && ls -l ${{github.workspace}}
 
