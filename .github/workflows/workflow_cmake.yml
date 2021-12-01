@@ -24,10 +24,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-
-    with:
-      name: google/googletest.git #     <-- clone https://github.com/org1/repo1
-      ref: refs/heads/release
+      with:
+        repository: google/googletest.git #     <-- clone https://github.com/org1/repo1
+        path: ./googletest
 
     - name: Setup Toolchain
       run: mkdir ${{github.workspace}}/toolchains && cd toolchains && wget ${{env.TOOLCHAIN_URL}} && tar -xf ${{env.TOOLCHAIN_TARBALL}}
