@@ -10,9 +10,9 @@ env:
   # Customize the CMake build type here (Release, Debug, RelWithDebInfo, etc.)
   BUILD_TYPE: RELEASE
   TOOLCHAIN: "10.3-2021.10"
-  TOOLCHAIN_DIR: "gcc-arm-none-eabi-"$TOOLCHAIN
-  TOOLCHAIN_TARBALL: $TOOLCHAIN_DIR"-x86_64-linux.tar.bz2"
-  TOOLCHAIN_URL: "https://developer.arm.com/-/media/Files/downloads/gnu-rm/"$TOOLCHAIN"/"$TOOLCHAIN_TARBALL
+  TOOLCHAIN_DIR: "gcc-arm-none-eabi-10.3-2021.10"
+  TOOLCHAIN_TARBALL: "gcc-arm-none-eabi-10.3-2021.10-x86_64-linux.tar.bz2"
+  TOOLCHAIN_URL: "https://developer.arm.com/-/media/Files/downloads/gnu-rm/10.3-2021.10/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux.tar.bz2"
 
 jobs:
   build:
